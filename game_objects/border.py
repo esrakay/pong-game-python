@@ -2,7 +2,7 @@ from turtle import Turtle
 
 
 class Border(Turtle):
-    def __init__(self, x_cor, y_cor, head_direction, length):
+    def __init__(self, x_cor: int, y_cor: int, head_direction: int, length: int) -> None:
         super().__init__()
         self.shape("square")
         self.color("green")

@@ -11,7 +11,7 @@ PLAYER_1_X_POS = (-configs.GAME_WIDTH / 2 + 30, 0)
 PLAYER_2_X_POS = (configs.GAME_WIDTH / 2 - 30, 0)
 
 
-def main():
+def main() -> None:
     screen = PongScreen()
     ball = Ball()
     player_1 = Player(PLAYER_1_X_POS)

@@ -7,19 +7,19 @@ Y_BORDER_LIMIT = configs.GAME_HEIGHT / 2 - 50
 
 
 class NPC(Character):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.goto(START_POSITION)
         self.direction = 1
 
-    def reset_position(self):
+    def reset_position(self) -> None:
         self.goto(START_POSITION)
 
-    def change_direction(self):
+    def change_direction(self) -> None:
         if self.ycor() >= Y_BORDER_LIMIT or self.ycor() <= -Y_BORDER_LIMIT:
             self.direction *= -1
 
-    def move(self, ball):
+    def move(self, ball) -> None:
         self.change_direction()
         y_cor = self.ycor() + MOVEMENT_DISTANCE * self.direction
         new_position = (self.xcor(), y_cor)
